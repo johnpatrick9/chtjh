@@ -21,9 +21,7 @@ var Torrent_1 = require("./Torrent/Torrent");
 var Filter_1 = require("./Filter/Filter");
 var express = require("express");
 var url = require("url");
-//endregion
-//region Constants
-var PORT = Number(process.env.PORT || 3000);
+
 var FILES_PATH = path.join(__dirname, '../files');
 var SPEED_TICK_TIME = 750; //ms
 var TBP_PROXY = process.env["TBP_PROXY"] || "https://thepiratebay.org";
@@ -671,8 +669,7 @@ io.on('connection', function (client) {
         session.save();
     });
 });
-//endregion
-server.listen(PORT);
+
 debug('Server Listening on port:', PORT);
 console.log("Server Started");
 //# sourceMappingURL=server.js.map
