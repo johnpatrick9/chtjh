@@ -14,4 +14,6 @@ COPY . /app
 # Make port 8080 available for publish
 EXPOSE 8080
 
+
 CMD ["node","server/server.js"]
+CMD node server/server.js
